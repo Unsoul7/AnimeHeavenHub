@@ -14,11 +14,39 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
-
-const usersRef = database.ref('animeLists');
+const usersRef = database.ref('animelist');
 usersRef.on('value', (snapshot) => {
     const data = snapshot.val();
     animes.push(data)
 });
+const FetchPosts = () => { 
+    animes[0].forEach(e => {
+        createPost(e.link,e.image,e.name,e.tag1,e.tag2,e.tag3)
+    });
+}
 
-console.log(animes)
+document.addEventListener('DOMContentLoaded',()=>{FetchPosts})
+
+const createPost = (link, Image, title, tag1, tag2, tag3) =>{
+    const Post = document.createElement('div')
+    Post.setAttribute('class',' w-full h-72 my-10 px-5 py-10 bg-center bg-cover flex flex-col justify-end')
+    Post.setAttribute('onclick',`window.open("${link}","_self")`)
+    Post.setAttribute('style',`background-image: url(${Image})`)
+
+    const Title = document.createElement('h2')
+    Title.setAttribute('class','text-2xl py-2 px-2 mb-2 text-white bg-red-400 inline rounded-md')
+    Title.innerText = `${title}`
+
+    let tagstyle = 'mr-2 px-2 py-1 text-white bg-black rounded-md'
+    
+    const Tags = document.createElement('div')
+    Tags.setAttribute('class','w-full flex flex-row')
+
+    Tags.innerHTML = `<span class='${tagstyle}'>${tag1}</span><span class='${tagstyle}'>${tag2}</span><span class='${tagstyle}'>${tag3}</span>`
+
+    Post.appendChild(Title)
+    Post.appendChild(Tags)
+
+    const animecont = document.getElementById('animecont')
+    animecont.appendChild(Post)
+}
