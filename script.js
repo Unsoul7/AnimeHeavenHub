@@ -18,6 +18,7 @@ const usersRef = database.ref('animelist');
 usersRef.on('value', (snapshot) => {
     const data = snapshot.val();
     animes.push(data)
+    FetchPosts()
 });
 const FetchPosts = () => { 
     animes[0].forEach(e => {
@@ -25,11 +26,11 @@ const FetchPosts = () => {
     });
 }
 
-document.addEventListener('DOMContentLoaded',()=>{FetchPosts})
+
 
 const createPost = (link, Image, title, tag1, tag2, tag3) =>{
     const Post = document.createElement('div')
-    Post.setAttribute('class',' w-full h-72 my-10 px-5 py-10 bg-center bg-cover flex flex-col justify-end')
+    Post.setAttribute('class',' w-full h-72 my-5 px-5 py-10 bg-center bg-cover flex flex-col justify-end')
     Post.setAttribute('onclick',`window.open("${link}","_self")`)
     Post.setAttribute('style',`background-image: url(${Image})`)
 
@@ -50,3 +51,4 @@ const createPost = (link, Image, title, tag1, tag2, tag3) =>{
     const animecont = document.getElementById('animecont')
     animecont.appendChild(Post)
 }
+
