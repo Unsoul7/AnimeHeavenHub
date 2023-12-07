@@ -35,10 +35,10 @@ const createPost = (link, Image, title, tag1, tag2, tag3) =>{
     Post.setAttribute('style',`background-image: url(${Image})`)
 
     const Title = document.createElement('h2')
-    Title.setAttribute('class','text-2xl py-2 px-2 mb-2 text-white bg-red-400 inline rounded-md')
+    Title.setAttribute('class','text-lg py-1 px-2 mb-2 text-white bg-red-400 inline rounded-md')
     Title.innerText = `${title}`
 
-    let tagstyle = 'mr-2 px-2 py-1 text-white bg-black rounded-md'
+    let tagstyle = 'mr-2 px-2 py-1 text-white bg-black rounded-md text-[.8rem]'
     
     const Tags = document.createElement('div')
     Tags.setAttribute('class','w-full flex flex-row')
