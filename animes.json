@@ -2,9 +2,33 @@
     "animelist": [
         {
             "name": "Jujutsu Kaisen Season 2",
-            "link": "jjks2.html",
+            "link": "/AnimeHeavenHub/jujutsukaisens2",
             "image": "https://c4.wallpaperflare.com/wallpaper/940/130/408/jujutsu-kaisen-sukuna-kugisaki-nobara-maki-zenin-mahito-jujutsu-kaisen-hd-wallpaper-preview.jpg",
             "tag1": "Season 2",
+            "tag2": "English",
+            "tag3": "Dubbed + Subbed"
+        },
+        {
+            "name": "Attack on Titan Final Season ",
+            "link": "/AnimeHeavenHub/aotfs",
+            "image": "https://beebom.com/wp-content/uploads/2023/01/Attack-on-Titan-Season-4-Part-3-Everything-You-Need-to-Know.jpg?w=750&quality=75",
+            "tag1": "Season 4",
+            "tag2": "English",
+            "tag3": "Dubbed + Subbed"
+        },
+        {
+            "name": "Tokyo Ghoul Season 1 ",
+            "link": "/AnimeHeavenHub/tgs1",
+            "image": "https://ovp.itv.com/images/programme/gptnpgr/itv_hub/01_Hero_DesktopCTV/16x9?distributionPartner=itv_hub&fallback=standard&w=767&q=65&blur=0&bg=false",
+            "tag1": "Season 1",
+            "tag2": "English",
+            "tag3": "Dubbed + Subbed"
+        },
+        {
+            "name": "Demon Slayer Season 1",
+            "link": "/AnimeHeavenHub/dss1",
+            "image": "https://themarckoguy.files.wordpress.com/2021/12/kimetsunoyaibaseason1.jpg",
+            "tag1": "Season 1",
             "tag2": "English",
             "tag3": "Dubbed + Subbed"
         }
