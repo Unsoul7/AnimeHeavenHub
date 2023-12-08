@@ -30,7 +30,7 @@ const FetchPosts = () => {
 
 const createPost = (link, Image, title, tag1, tag2, tag3) =>{
     const Post = document.createElement('div')
-    Post.setAttribute('class',' bg-center bg-cover w-full md:w-80 h-72 my-3 px-5 py-8 flex flex-col justify-end cursor-pointer')
+    Post.setAttribute('class',' bg-center bg-cover w-full md:w-60 h-72 my-3 px-5 py-8 flex flex-col justify-end cursor-pointer')
     Post.setAttribute('onclick',`window.open("${link}","_self")`)
     Post.setAttribute('style',`background-image: url(${Image})`)
 
